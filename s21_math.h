@@ -5,8 +5,9 @@
 
 #define S21_NAN __builtin_nanf("")
 #define S21_INF __builtin_inf() 
+#define S21_EPS 1e-15
 
-int abs(int x);
+int         S21_abs(int x);
 long double s21_acos(double x);
 long double s21_asin(double x);
 long double s21_atan(double x);

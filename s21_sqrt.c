@@ -5,9 +5,9 @@ long double s21_sqrt(double x) {
     long double out = 0;
     long int count = 0;
     if (x >= 0) {
-        while((res - out) > 1e-12 || (res - out) < -1e-15) {
+        while((res - out) > S21_EPS || (res - out) < -S21_EPS) {
             out = res;
-            res = (x / res + res) * 0.5;
+            res = (x / res + res) / 2;
             count++;
         }
     } else {
