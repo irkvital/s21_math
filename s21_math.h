@@ -3,6 +3,9 @@
 
 #include <stdio.h>
 
+#define S21_NAN __builtin_nanf("")
+#define S21_INF __builtin_inf() 
+
 int abs(int x);
 long double s21_acos(double x);
 long double s21_asin(double x);

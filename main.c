@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main() {
-    double inp   = 9000000000004523786;
+    double inp   = S21_NAN;
     double out   = sqrt(inp);
     double s_out = s21_sqrt(inp);
 
