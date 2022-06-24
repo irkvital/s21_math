@@ -4,8 +4,11 @@
 #include <stdio.h>
 
 #define S21_NAN __builtin_nanf("")
-#define S21_INF __builtin_inf() 
-#define S21_EPS 1e-15
+#define S21_INF __builtin_inf()
+#define S21_EPS     1e-17
+#define S21_PI_HALF 1.57079632679489661923132169163975144
+#define S21_PI      3.14159265358979323846264338327950288
+
 
 int         S21_abs(int x);
 long double s21_acos(double x);
