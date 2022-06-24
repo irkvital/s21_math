@@ -11,6 +11,8 @@ long double s21_atan(double x) {
         out = S21_PI_HALF;
     } else if (x == - S21_INF) {
         out = - S21_PI_HALF;
+    } else if (s21_fabs(x - 1) < 0.00000000001) {
+        out = S21_PI_HALF / 2;
     } else if (s21_fabs(x) > 1) {
         out = S21_PI_HALF - s21_atan(1 / x);
     } else {
