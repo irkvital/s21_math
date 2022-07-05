@@ -4,8 +4,8 @@ long double s21_atan(double x) {
     long double a = 1 * x, tailor = 1, xx = x * x;
     long double count = 1, out = x;
     if (x < 0) {
-        count = - count;
-        x = - x;
+        count = - 1;
+        x = s21_fabs(x);
     }
     if (x == S21_INF) {
         out = S21_PI_HALF;
