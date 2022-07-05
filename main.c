@@ -4,7 +4,7 @@
 
 int main() {
     // long double inp = - 1.7976931348623157e+308;
-    long double inp = 0.99999999999;
+    long double inp = 1.0000001;
 
     // double out   = sqrt(inp);
     // printf("%.30lf\n", out);
