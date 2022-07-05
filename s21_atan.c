@@ -1,12 +1,12 @@
 #include "s21_math.h"
 
 long double s21_atan(double x) {
-    long double a = 1 * x, tailor = 1, xx = x * x;
-    long double count = 1, out = x;
+    long double count = 1;
     if (x < 0) {
         count = - 1;
         x = s21_fabs(x);
     }
+    long double a = 1 * x, tailor = 1, xx = x * x, out = x;
     if (x == S21_INF) {
         out = S21_PI_HALF;
     } else if (x == - S21_INF) {
