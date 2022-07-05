@@ -3,19 +3,37 @@
 #include <limits.h>
 
 int main() {
-    // long double inp = - 1.7976931348623157e+308;
-    long double inp = - 0.85;
-    // printf("%Lf\n", s21_sqrt(1 - inp * inp) / inp);
-    double out   = sqrt(inp);
-    printf("%.30lf\n", out);
-    double s_out = s21_sqrt(inp);
-    printf("%.30lf\n", s_out);
-    
-    // double out  = acos(inp);
+
+    long double min = - 2, max = 2;   //  Область определения функции
+
+    long double x = min;
+    long double delta = (max - min) / 10;
+    int count = 1;
+    long double percent = min + delta * count;
+    while (x < max) {
+        double out  = atan(x);        //  Целевая функция
+        double sout = s21_atan(x);    //  Целевая функция
+        if ((int)((out - sout) * 1e13) && out == out) {
+        printf("%.7Lf ! %.12lf\n", x, out - sout);
+        printf("%.12lf\n", out);
+        printf("%.12lf\n\n", sout);
+        }
+        x += 0.0000001;
+
+        // Percent completed
+        if (x >= percent) {
+            printf("%d%%\n", count * 10);
+            count++;
+            percent = min + delta * count;
+        }
+    }
+
+
+    // long double inp = - 0.8;
+    // double out   = atan(inp);
     // printf("%.30lf\n", out);
-    // double sout = s21_acos(inp);
-    // printf("%.30lf\n", sout);
-    // printf("!%.30lf\n", out - sout);
+    // double s_out = s21_atan(inp);
+    // printf("%.30lf\n", s_out);
 
     return 0;
 }
