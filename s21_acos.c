@@ -7,3 +7,18 @@ long double s21_acos(double x) {
     }
     return out;
 }
+
+// #include "s21_math.h"
+
+// long double s21_acos(double x) {
+//     long double out = S21_NAN;
+//     if (x >= - 1 && x <= 1) {
+//         out = s21_atan(s21_sqrt(1 - x * x) / s21_fabs(x));
+//         if (x < 0) {
+//             out = S21_PI - out;
+//         }
+//     } else {
+//         errno = EDOM;
+//     }
+//     return out;
+// }

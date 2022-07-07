@@ -10,6 +10,24 @@ long double s21_asin(double x) {
     return out * sign;
 }
 
+// #include "s21_math.h"
+
+// long double s21_asin(double x) {
+//     long double out = S21_NAN;
+//     int sign = 1;
+//     if (x >= - 1 && x <= 1) {
+//         if (x < 0) {
+//             sign *= - 1;
+//             x = s21_fabs(x);
+//         }
+//         out = s21_atan(x / s21_sqrt(1 - x * x));
+//     } else {
+//         errno = EDOM;
+//     }
+//     return out * sign;
+// }
+
+
 
 // #include "s21_math.h"
 
